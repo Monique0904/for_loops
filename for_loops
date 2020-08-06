@@ -1,0 +1,50 @@
+#program start
+
+#input section
+	#set turtle name to rev
+	#set rev speed to 7
+	#set rev color to light green
+	#set rev color to pink
+	
+#processing section
+	#set start value for the counter variable n to 0
+	#counter n increases by 5 after each iteration of the loop
+	#while n is less than 90 the loop will repeat 
+	#while n is true turtle pen up, move turtle to position (-5,-5), pen down, draw a semicircle
+	#set start value for the counter variable x to 0
+	#counter x increases by 5 after each iteration of the loop
+	#while x is less than 90 the loop will repeat 
+	#while x is true turtle pen up, move turtle to position (-5,-5), pen down, draw a semicircle 
+	
+#output section
+	#display "Pom-pom!"
+	#display 18 light green semicircles
+	#display 18 pink semicircles
+	
+#eop
+
+import turtle
+
+def main():
+	
+	rev = turtle.Turtle()
+	rev.speed(7)
+	rev.color("light green")
+	
+	for n in range (0,90,5):
+		rev.up()
+		rev.goto(-5,-5)
+		rev.down()
+		rev.circle(100,70)
+		
+	rev.color("pink")
+	
+	for x in range (0,90,5):
+		rev.up()
+		rev.goto(-5,-5)
+		rev.down()
+		rev.circle(100,70)
+		
+	print("Pom-pom!")
+	
+main()
